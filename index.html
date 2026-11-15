@@ -1,667 +1,798 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Vinay Pal Portfolio</title>
-	<meta name="description" content="Vinay Pal - Python & GenAI Developer from Bhopal. MCA Graduate skilled in FastAPI, LangChain, LangGraph.">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-
-<style>
-
-/*======================================
-//--//-->   ABOUT
-======================================*/
-
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
-
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Vinay Pal</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Vinay Pal</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Python Developer',
-						'Backend Developer',
-						'GenAI Engineer  ',
-						'FastAPI Developer  ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <!-- <h2 class="mb-4">I'm a Fresher in Python Development</h2> -->
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="http://linkedin.com/in/vinay-pal-265630293" class="btn btn-primary py-3 px-4">Linkedin</a> 
-					       <a href="https://github.com/vinaypal31" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
-					       <a href="https://drive.google.com/file/d/1gAUVM8mO9m4LsR7Gk8oLBTps-siZCjui/view?usp=drive_link" class="btn btn-white btn-outline-white py-3 px-4">Download CV</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name : </span> <span>Vinay Pal</span></p>
-										<p><span class="title-s"></span> <span>Python Developer</span></p>
-										<p><span class="title-s">Education : </span> <span>Master Of Computer Application</span></p>
-										<p><span class="title-s">Address : </span> <span>Bhopal, (M.P), India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>HTML</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>CSS</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Python</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>FastAPI</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>LangChain , LangGraph</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>MCA graduate and Python Backend Developer with hands-on experience in FastAPI, LangChain, and LangGraph. Completed internship at TechSimPlus Systems, Bhopal, where I built REST APIs and AI-powered applications. Passionate about Generative AI and solving real-world problems through clean, efficient code. Actively looking for full-time opportunities in Python, Backend, or GenAI development.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Python Developer , FastAPI &amp; GenAI Engineer</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Master Of Computer Application</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>Backend & Tools:</span> <span>FastAPI , Postman , VS Code &amp; Git</span></li>
-									<li class="d-flex"><span>Programming & Data:</span> <span>Python , SQL &amp; Pandas , RAG , Numpy &amp; Machine Learning</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Dancing</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="10">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="http://linkedin.com/in/vinay-pal-265630293" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Proven ability to learn new technologies quickly and apply them to real-world problems. Seeking an entry-level position where I can use my skills and knowledge to contribute to a team and make a positive impact on the company.</p>
-          </div>
-        </div>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-11">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Sep 2025 - Dec 2025</span>
-						<h2>Backend Python Developer Intern</h2>
-						<span class="position">TechSimPlus Systems, Bhopal</span>
-						<p class="mt-4">TechSimPlus Systems is a technology-focused company providing software development and IT solutions.
- 
-							<ul>
-								<li>Worked on Python-based backend development and REST API creation using FastAPI.</li>
-                                <li>Assisted in developing and testing application features, ensuring code quality and performance.</li>
-                                <li>Gained hands-on experience with databases, API integration, and real-world software development workflows.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2023-2025</span>
-    					<h2>Master Of Computer Application</h2>
-    					<span class="position">Rajiv Gandhi Proudyogiki Vishwavidyalaya Bhopal</span>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2020-2023</span>
-    					<h2>Bachelors in Arts</h2>
-    					<span class="position">Barkatullah Vishwavidyalaya Bhopal Madhya Pradesh</span>
-    				</div>
-				</div>
-
-				<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2019-2020</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">Tagore vidhya Mandir School Itarsi</span>
-    				</div>
-				</div>
-
-				<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2017-2018</span>
-    					<h2>High Secondary School</h2>
-    					<span class="position">Tagore vidhya Mandir School Itarsi</span>
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/1gAUVM8mO9m4LsR7Gk8oLBTps-siZCjui/view?usp=drive_link" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-   
-
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample  projects on HTML, CSS, Python , FastAPI , LangChain , AWS.</p>
-          </div>
-        </div>
-		  <div class="row d-flex justify-content-center">
-    <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-        <a href="https://github.com/vinaypal31/Askbuddy-chatbot" class="block-20 zoom-effect" style="background-image: url('images/proj_7.jpg');">
-        </a>
-        <div class="text mt-3 float-right d-block">
-            <h3 class="heading"><a href="https://github.com/vinaypal31/Askbuddy-chatbot">AskBuddy - AI Q&A Chatbot</a></h3>
-            <p>LLM-powered chatbot built with LangChain, Google Gemini 2.5 Flash and Streamlit. Supports real-time AI responses and chat history.</p>
-        </div>
-        </div>
-    </div>
-    <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-        <a href="https://github.com/vinaypal31/Fastmcp-Ai-assistant-" class="block-20 zoom-effect" style="background-image: url('images/proj_8.jpg');">
-        </a>
-        <div class="text mt-3 float-right d-block">
-            <h3 class="heading"><a href="https://github.com/vinaypal31/Fastmcp-Ai-assistant-">FastMCP AI Automation Assistant</a></h3>
-            <p>Powerful AI assistant using FastMCP and LangChain. Can search web, send emails, summarize YouTube videos and automate GitHub tasks.</p>
-        </div>
-        </div>
-    </div>
-    <div class="col-md-4 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-        <a href="https://github.com/vinaypal31/GenAI-FastAPI-Project1" class="block-20 zoom-effect" style="background-image: url('images/proj_9.jpg');">
-        </a>
-        <div class="text mt-3 float-right d-block">
-            <h3 class="heading"><a href="https://github.com/vinaypal31/GenAI-FastAPI-Project1">GenAI FastAPI Chatbot</a></h3>
-            <p>GenAI chatbot built with FastAPI, LangChain and Groq API. Features user authentication, chat history storage with SQLAlchemy and SQLite.</p>
-        </div>
-        </div>
-    </div>
-</div>
-        <div class="row d-flex">
-           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/vinaypal31/Dubai_Cold_Coffee_Finder" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/vinaypal31/Dubai_Cold_Coffee_Finder">Dubai cold coffee finder using smart filter</a></h3>
-                <p>Where user can search for the best cold coffee shop in dubai using smart filters.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/vinaypal31/Ecommerce-backend-fastapi" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/vinaypal31/Ecommerce-backend-fastapi">E-Commerce Backend API using FastAPI Project for Beginners</a></h3>
-                <p>A FastAPI based backend providing secure authentication, product and order management using JWT and PostgreSQL.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/vinaypal31/Online-Retail-Customer-Analysis" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/vinaypal31/Online-Retail-Customer-Analysis">Online Retail Customer Analysis</a></h3>
-                <p>This project employes Python , Pandas , Numpy and Matplotlib for data cleaning.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/vinaypal31/GrowClone" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Vinay Pal | Python Developer &amp; AI Engineer</title>
   
-				  <h3 class="heading"><a href="https://github.com/vinaypal31/GrowClone">Grow-Clone</a></h3>
-				  <p>A responsive fintech web app clone showcasing stock and mutual fund listings with a modern, user-friendly interface.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/vinaypal31" class="block-20 zoom-effect" style="background-image: url('images/proj_6.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Vinay Pal - Python Developer at Actowiz Solutions. Specialized in AI Assistants, FastMCP, FastAPI Backends, Automated Web Scraping, and Full-Stack Solutions.">
+  <meta name="keywords" content="Vinay Pal, Python Developer, Actowiz Solutions, FastMCP, LangChain, FastAPI, Web Scraping, Generative AI, MCA, Bhopal, Portfolio">
+  <meta name="author" content="Vinay Pal">
   
-				  <h3 class="heading"><a href="https://github.com/vinaypal31">Grid-Portfolio</a></h3>
-				  <p>A grid portfolio is a layout used to showcase a collection of projects or images in a structured, organized manner.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/100rubpal/netflex-clone" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"></a>
-				<div class="text mt-3 float-right d-block">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vinay Pal | Python Developer @ Actowiz Solutions">
+  <meta property="og:description" content="Explore AI projects, FastAPI backends, web scrapers, and skills of Vinay Pal.">
+  <meta property="og:image" content="images/about-me.png">
   
-				  <h3 class="heading"><a href="https://github.com/100rubpal/netflex-clone">Netflix-Clone</a></h3>
-				  <p>Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile  &amp; tablet and more.</p>
-				</div>
-			  </div>
-			</div>
-		 </div>
-	  </div>
-    </section>
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Modern Clean Stylesheet -->
+  <link rel="stylesheet" href="css/modern.css">
+</head>
+<body>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="5">0</strong>
-                <span>Achievements</span>
-              </div>
+  <!-- =================================================================
+       NAVBAR
+  ================================================================== -->
+  <nav class="navbar" id="main-navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-accent">Vinay</span>Pal<span class="logo-dot">.</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="https://drive.google.com/file/d/1gAUVM8mO9m4LsR7Gk8oLBTps-siZCjui/view?usp=drive_link" target="_blank" class="nav-btn">
+            <i class="fa-solid fa-file-arrow-down"></i> Resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =================================================================
+       HERO SECTION
+  ================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-badge-wrap">
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span>Python Developer @ Actowiz Solutions</span>
             </div>
           </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Projects</span>
-              </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Vinay Pal</span>
+          </h1>
+
+          <div class="typing-container">
+            <span>I build&nbsp;</span>
+            <span class="typing-text" id="typing-text">Python &amp; AI Solutions</span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-desc">
+            <strong>Python Developer</strong> at <strong>Actowiz Solutions</strong> with an <strong>MCA</strong> degree. 
+            I engineer high-speed <strong>web crawlers</strong>, scalable <strong>FastAPI backends</strong>, and 
+            modern <strong>AI agents &amp; assistants</strong> with LangChain and FastMCP.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">
+              <i class="fa-solid fa-paper-plane"></i> Get In Touch
+            </a>
+            <a href="#projects" class="btn-secondary">
+              <i class="fa-solid fa-laptop-code"></i> View Projects
+            </a>
+            <a href="https://drive.google.com/file/d/1gAUVM8mO9m4LsR7Gk8oLBTps-siZCjui/view?usp=drive_link" target="_blank" class="btn-secondary">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span>Connect:</span>
+            <a href="http://linkedin.com/in/vinay-pal-265630293" target="_blank" class="social-icon-btn" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/vinaypal31" target="_blank" class="social-icon-btn" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/vinaypal_31?igsh=aTUwYnl1eGJ4dTc1" target="_blank" class="social-icon-btn" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="http://www.youtube.com/@VinayPal-31" target="_blank" class="social-icon-btn" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/918085894055" target="_blank" class="social-icon-btn" title="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-avatar-frame">
+            <img src="images/about-me.png" alt="Vinay Pal - Python Developer">
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-1">
+            <div class="badge-icon python">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="badge-text">
+              <small>Specialization</small>
+              <strong>Python &amp; AI Agents</strong>
             </div>
           </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="14">0</strong>
-                <span>GitHub Repos</span>
-              </div>
+
+          <div class="floating-badge badge-2">
+            <div class="badge-icon company">
+              <i class="fa-solid fa-briefcase"></i>
             </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="50">0</strong>
-                <span>Cups of coffee</span>
-              </div>
+            <div class="badge-text">
+              <small>Current Role</small>
+              <strong>Actowiz Solutions</strong>
             </div>
           </div>
         </div>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve  problems &amp; uncover hidden  stories </h4>
-						<br>
-						<p><a href="https://github.com/vinaypal31" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+    </div>
+  </section>
 
-
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+  <!-- =================================================================
+       METRICS / STATS RIBBON
+  ================================================================== -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <div class="metric-icon-box">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <div class="metric-content">
+            <h3>Actowiz</h3>
+            <p>Solutions (Python Dev)</p>
           </div>
         </div>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p><a href="">Bhopal , India</a></p>
-	          </div>
+        <div class="metric-item">
+          <div class="metric-icon-box">
+            <i class="fa-solid fa-robot"></i>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://8085894055">+91 8085894055</a></p>
-	          </div>
+          <div class="metric-content">
+            <h3>GenAI &amp; MCP</h3>
+            <p>LLM Chatbots &amp; Agents</p>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=vinaypal1831@gmail.com">vinaypal1831@gmail.com</a></p>
-	          </div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-icon-box">
+            <i class="fa-solid fa-graduation-cap"></i>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/1gAUVM8mO9m4LsR7Gk8oLBTps-siZCjui/view?usp=drive_link">Resume Link</a></p>
-	          </div>
+          <div class="metric-content">
+            <h3>MCA</h3>
+            <p>RGPV Bhopal</p>
+          </div>
+        </div>
+
+        <div class="metric-item">
+          <div class="metric-icon-box">
+            <i class="fa-solid fa-code-commit"></i>
+          </div>
+          <div class="metric-content">
+            <h3>10+</h3>
+            <p>Full-Stack &amp; AI Projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       WORK EXPERIENCE (TOP HIGHLIGHT)
+  ================================================================== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Career History</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">My professional journey in software engineering &amp; data solutions</p>
+      </div>
+
+      <div class="experience-wrap">
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role-info">
+              <h3>
+                <i class="fa-brands fa-python" style="color: #38bdf8;"></i> Python Developer
+              </h3>
+              <div class="exp-company">Actowiz Solutions</div>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-badge-date"><i class="fa-regular fa-calendar"></i> Oct 2024 – Present</span>
+              <span class="exp-badge-active">Full-Time</span>
+            </div>
           </div>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2> Interested in<span> Working together </span> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vinaypal1831@gmail.com"class="btn btn-primary py-3 px-5"target="_blank">Get in Touch</a></h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="http://linkedin.com/in/vinay-pal-265630293"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://m.facebook.com/vinay.pal.5264/"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/vinaypal_31?igsh=aTUwYnl1eGJ4dTc1"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+          <p class="exp-description">
+            Working as an integral part of the data engineering and automation team at Actowiz Solutions. 
+            Responsible for crafting robust web scraping tools, extracting mission-critical datasets, and streamlining data delivery pipelines.
+          </p>
 
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">@Vinaypal_31</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+          <ul class="exp-bullets">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Developed high-performance web scrapers and crawlers in Python using BeautifulSoup, Scrapy, and Requests to extract data across e-commerce, real estate, and finance portals.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Engineered bypass workflows to handle dynamic JavaScript-loaded content, pagination, captcha systems, proxies, and rotating user-agents.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Cleaned, parsed, and transformed raw unstructured web data into normalized JSON, CSV, and SQL database formats with rigorous validation.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Collaborated with client-facing and QA teams to guarantee 99%+ data precision and zero downtime delivery for automated scheduled jobs.</span>
+            </li>
+          </ul>
 
+          <div class="exp-tech-tags">
+            <span class="tech-tag highlight">Python 3</span>
+            <span class="tech-tag highlight">Web Scraping</span>
+            <span class="tech-tag highlight">BeautifulSoup</span>
+            <span class="tech-tag">Requests</span>
+            <span class="tech-tag">Selenium</span>
+            <span class="tech-tag">Data Parsing</span>
+            <span class="tech-tag">JSON / CSV</span>
+            <span class="tech-tag">Regex</span>
+            <span class="tech-tag">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <!-- =================================================================
+       ABOUT ME SECTION
+  ================================================================== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Biography</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Get to know who I am, my background, and what drives my work</p>
+      </div>
 
+      <div class="about-grid">
+        <div class="about-photo-wrapper">
+          <img src="images/about-me.png" alt="Vinay Pal">
+        </div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+        <div class="about-content">
+          <h3>Empowering Data, AI &amp; Web with Clean Code</h3>
+          <p>
+            I am a <strong>Master of Computer Applications (MCA)</strong> graduate from Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal. 
+            Currently, I am working as a <strong>Python Developer at Actowiz Solutions</strong>, where I turn complex, unstructured web information into structured, actionable business intelligence.
+          </p>
+          <p>
+            Beyond enterprise web scraping, I am passionate about <strong>Generative AI, LangChain, FastMCP automation, and FastAPI backend engineering</strong>. 
+            From building intelligent conversational agents to architecting REST APIs with PostgreSQL, I enjoy crafting end-to-end software solutions that solve real problems.
+          </p>
+
+          <div class="about-info-cards">
+            <div class="info-card">
+              <small>Name</small>
+              <strong>Vinay Pal</strong>
+            </div>
+            <div class="info-card">
+              <small>Current Role</small>
+              <strong>Python Developer</strong>
+            </div>
+            <div class="info-card">
+              <small>Current Company</small>
+              <strong>Actowiz Solutions</strong>
+            </div>
+            <div class="info-card">
+              <small>Education</small>
+              <strong>MCA (RGPV Bhopal)</strong>
+            </div>
+            <div class="info-card">
+              <small>Location</small>
+              <strong>Bhopal (M.P.), India</strong>
+            </div>
+            <div class="info-card">
+              <small>Languages</small>
+              <strong>English, Hindi</strong>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="https://drive.google.com/file/d/1gAUVM8mO9m4LsR7Gk8oLBTps-siZCjui/view?usp=drive_link" target="_blank" class="btn-primary">
+              <i class="fa-solid fa-file-pdf"></i> View Official Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SKILLS SECTION
+  ================================================================== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+        <p class="section-subtitle">Categorized technologies and tools I utilize in daily development</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Category 1: Python, AI & Web Scraping -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <h3>Python, AI &amp; Web Scraping</h3>
+          </div>
+          <div class="skills-badge-list">
+            <span class="skill-badge"><i class="fa-brands fa-python" style="color: #38bdf8;"></i> Python 3</span>
+            <span class="skill-badge"><i class="fa-solid fa-robot" style="color: #a78bfa;"></i> LangChain &amp; GenAI</span>
+            <span class="skill-badge"><i class="fa-solid fa-microchip" style="color: #f43f5e;"></i> FastMCP Automation</span>
+            <span class="skill-badge"><i class="fa-solid fa-spider" style="color: #10b981;"></i> Web Scraping</span>
+            <span class="skill-badge"><i class="fa-solid fa-leaf" style="color: #34d399;"></i> BeautifulSoup</span>
+            <span class="skill-badge"><i class="fa-solid fa-arrows-spin" style="color: #818cf8;"></i> Scrapy / Selenium</span>
+            <span class="skill-badge"><i class="fa-solid fa-bolt" style="color: #f59e0b;"></i> Requests Library</span>
+            <span class="skill-badge"><i class="fa-solid fa-filter" style="color: #ec4899;"></i> Regular Expressions (Regex)</span>
+            <span class="skill-badge"><i class="fa-solid fa-table" style="color: #38bdf8;"></i> Pandas &amp; JSON/CSV</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Backend & Databases -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h3>Backend APIs &amp; Databases</h3>
+          </div>
+          <div class="skills-badge-list">
+            <span class="skill-badge"><i class="fa-solid fa-bolt" style="color: #06b6d4;"></i> FastAPI</span>
+            <span class="skill-badge"><i class="fa-solid fa-network-wired" style="color: #38bdf8;"></i> RESTful APIs</span>
+            <span class="skill-badge"><i class="fa-solid fa-key" style="color: #fbbf24;"></i> JWT Authentication</span>
+            <span class="skill-badge"><i class="fa-solid fa-database" style="color: #34d399;"></i> PostgreSQL &amp; SQLite</span>
+            <span class="skill-badge"><i class="fa-solid fa-layer-group" style="color: #a855f7;"></i> SQLAlchemy ORM</span>
+            <span class="skill-badge"><i class="fa-brands fa-java" style="color: #f87171;"></i> Java</span>
+            <span class="skill-badge"><i class="fa-solid fa-code" style="color: #60a5fa;"></i> C / C++</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Frontend & UI -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <h3>Web &amp; Frontend</h3>
+          </div>
+          <div class="skills-badge-list">
+            <span class="skill-badge"><i class="fa-brands fa-html5" style="color: #f97316;"></i> HTML5</span>
+            <span class="skill-badge"><i class="fa-brands fa-css3-alt" style="color: #38bdf8;"></i> CSS3 &amp; SCSS</span>
+            <span class="skill-badge"><i class="fa-brands fa-js" style="color: #facc15;"></i> JavaScript (ES6+)</span>
+            <span class="skill-badge"><i class="fa-solid fa-display" style="color: #f43f5e;"></i> Streamlit UI</span>
+            <span class="skill-badge"><i class="fa-brands fa-bootstrap" style="color: #a855f7;"></i> Bootstrap 4/5</span>
+            <span class="skill-badge"><i class="fa-solid fa-mobile-screen" style="color: #10b981;"></i> Responsive Design</span>
+            <span class="skill-badge"><i class="fa-solid fa-table-cells" style="color: #06b6d4;"></i> CSS Grid &amp; Flexbox</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Tools & Platforms -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fa-solid fa-toolbox"></i>
+            </div>
+            <h3>Developer Tools &amp; Workflow</h3>
+          </div>
+          <div class="skills-badge-list">
+            <span class="skill-badge"><i class="fa-brands fa-git-alt" style="color: #f97316;"></i> Git Version Control</span>
+            <span class="skill-badge"><i class="fa-brands fa-github" style="color: #fff;"></i> GitHub</span>
+            <span class="skill-badge"><i class="fa-solid fa-laptop-code" style="color: #38bdf8;"></i> VS Code</span>
+            <span class="skill-badge"><i class="fa-solid fa-terminal" style="color: #10b981;"></i> Terminal &amp; Bash</span>
+            <span class="skill-badge"><i class="fa-solid fa-paper-plane" style="color: #fb923c;"></i> Postman API</span>
+            <span class="skill-badge"><i class="fa-brands fa-chrome" style="color: #eab308;"></i> Chrome DevTools</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       PROJECTS SECTION
+  ================================================================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Portfolio</span>
+        <h2 class="section-title">Projects Showcase</h2>
+        <p class="section-subtitle">Real-world AI assistants, FastAPI backends, web crawlers, and frontends</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: FastMCP AI Assistant -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="images/proj_8.jpg" alt="FastMCP AI Automation Assistant">
+            <div class="project-thumb-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">AI &amp; Automation</span>
+            <h3 class="project-title">FastMCP AI Automation Assistant</h3>
+            <p class="project-desc">
+              High-capability autonomous AI assistant built with FastMCP and LangChain. Integrates real-time web search, automated email dispatch, YouTube video summarization, and hands-free GitHub task automation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag highlight">FastMCP</span>
+              <span class="tech-tag highlight">LangChain</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Tool Calling</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/vinaypal31/Fastmcp-Ai-assistant-" target="_blank" class="project-btn">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AskBuddy Chatbot -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="images/proj_7.jpg" alt="AskBuddy AI Chatbot">
+            <div class="project-thumb-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Generative AI</span>
+            <h3 class="project-title">AskBuddy - AI Q&amp;A Chatbot</h3>
+            <p class="project-desc">
+              LLM-powered conversational chatbot built with LangChain, Google Gemini Flash, and Streamlit. Features dynamic multi-turn chat memory, streaming responses, and intuitive user interface.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag highlight">Google Gemini</span>
+              <span class="tech-tag highlight">LangChain</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/vinaypal31/Askbuddy-chatbot" target="_blank" class="project-btn">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: GenAI FastAPI Chatbot -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="images/proj_9.jpg" alt="GenAI FastAPI Chatbot">
+            <div class="project-thumb-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Full-Stack AI Backend</span>
+            <h3 class="project-title">GenAI FastAPI Chatbot</h3>
+            <p class="project-desc">
+              Production-ready GenAI chatbot service powered by FastAPI, LangChain, and Groq API. Features secure user authentication, persistent chat history using SQLAlchemy and SQLite.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag highlight">FastAPI</span>
+              <span class="tech-tag highlight">Groq API</span>
+              <span class="tech-tag">SQLAlchemy</span>
+              <span class="tech-tag">SQLite</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/vinaypal31/GenAI-FastAPI-Project1" target="_blank" class="project-btn">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: E-Commerce Backend FastAPI -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="images/proj_2.jpg" alt="E-Commerce Backend API">
+            <div class="project-thumb-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Backend Architecture</span>
+            <h3 class="project-title">E-Commerce Backend REST API</h3>
+            <p class="project-desc">
+              Scalable REST API backend providing secure JWT user authentication, role-based access control, product catalogue, and order transaction management backed by PostgreSQL.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag highlight">FastAPI</span>
+              <span class="tech-tag highlight">PostgreSQL</span>
+              <span class="tech-tag">JWT Auth</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/vinaypal31/Ecommerce-backend-fastapi" target="_blank" class="project-btn">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Dubai Cold Coffee Finder -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="images/proj_1.jpg" alt="Dubai Cold Coffee Finder">
+            <div class="project-thumb-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Python &amp; Data Scraping</span>
+            <h3 class="project-title">Dubai Cold Coffee Finder (Smart Filter)</h3>
+            <p class="project-desc">
+              Data extraction and recommendation tool designed to scrape, filter, and surface top-rated specialty coffee shops across Dubai based on smart criteria and user preferences.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag highlight">Python</span>
+              <span class="tech-tag highlight">Data Extraction</span>
+              <span class="tech-tag">Filtering Algorithms</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/vinaypal31/Dubai_Cold_Coffee_Finder" target="_blank" class="project-btn">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Groww Clone -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="images/proj_4.jpg" alt="Groww Clone Project">
+            <div class="project-thumb-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">FinTech Frontend</span>
+            <h3 class="project-title">Groww Clone (Trading Platform UI)</h3>
+            <p class="project-desc">
+              Comprehensive responsive clone of the Groww investment ecosystem. Showcases clean financial dashboards, stock listings, demat information, and modern mobile-first UI architecture.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag highlight">HTML5</span>
+              <span class="tech-tag highlight">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Responsive UI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/vinaypal31/GrowClone" target="_blank" class="project-btn">
+                <i class="fa-brands fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       EDUCATION SECTION
+  ================================================================== -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">Education &amp; Qualifications</h2>
+        <p class="section-subtitle">My academic foundations in computer science and literature</p>
+      </div>
+
+      <div class="education-timeline">
+        <!-- Education 1: MCA -->
+        <div class="edu-item">
+          <div class="edu-marker"></div>
+          <div class="edu-card">
+            <span class="edu-date">2023 – 2025</span>
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal</p>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.4rem;">
+              Advanced studies in software development, data structures, algorithms, databases, web technologies, and system design.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education 2: BA -->
+        <div class="edu-item">
+          <div class="edu-marker"></div>
+          <div class="edu-card">
+            <span class="edu-date">2020 – 2023</span>
+            <h3>Bachelor of Arts (BA)</h3>
+            <p>Barkatullah Vishwavidyalaya (BU), Bhopal</p>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.4rem;">
+              Developed strong analytical, communication, critical thinking, and linguistic skills.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education 3: 12th -->
+        <div class="edu-item">
+          <div class="edu-marker"></div>
+          <div class="edu-card">
+            <span class="edu-date">2019 – 2020</span>
+            <h3>Higher Secondary School (12th)</h3>
+            <p>Tagore Vidhya Mandir School, Itarsi (M.P.)</p>
+          </div>
+        </div>
+
+        <!-- Education 4: 10th -->
+        <div class="edu-item">
+          <div class="edu-marker"></div>
+          <div class="edu-card">
+            <span class="edu-date">2017 – 2018</span>
+            <h3>High School (10th)</h3>
+            <p>Tagore Vidhya Mandir School, Itarsi (M.P.)</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="https://drive.google.com/file/d/1gAUVM8mO9m4LsR7Gk8oLBTps-siZCjui/view?usp=drive_link" target="_blank" class="btn-primary">
+          <i class="fa-solid fa-download"></i> Download Full Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       CONTACT SECTION
+  ================================================================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Have a project, collaboration, or job opportunity? Let's discuss!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Cards -->
+        <div class="contact-info-list">
+          <!-- Email Card with Copy Feature -->
+          <div class="contact-card" id="copy-email-btn" style="cursor: pointer;" title="Click to copy email">
+            <div class="contact-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <small>Email Address (Click to Copy)</small>
+              <a href="mailto:vinaypal1831@gmail.com">vinaypal1831@gmail.com</a>
+            </div>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <small>Contact Number</small>
+              <a href="tel://+918085894055">+91 8085894055</a>
+            </div>
+          </div>
+
+          <!-- Location Card -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-details">
+              <small>Location</small>
+              <strong>Bhopal (M.P.), India</strong>
+            </div>
+          </div>
+
+          <!-- Current Company Card -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="contact-details">
+              <small>Current Company</small>
+              <strong>Actowiz Solutions (Python Developer)</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Box -->
+        <div class="contact-form-box">
+          <h3>Send Me A Message</h3>
+          <p>Fill out the form below and it will directly open in your email client ready to send.</p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Your Full Name *</label>
+              <input type="text" id="form-name" class="form-control" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-email">Your Email Address *</label>
+              <input type="email" id="form-email" class="form-control" placeholder="e.g. john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-subject">Subject</label>
+              <input type="text" id="form-subject" class="form-control" placeholder="Project Inquiry / Opportunity">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message">Message *</label>
+              <textarea id="form-message" class="form-control" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       FOOTER
+  ================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>© <span id="year">2025</span> <strong>Vinay Pal</strong>. All rights reserved.</p>
+          <p style="font-size: 0.8rem; color: #64748b; margin-top: 0.2rem;">Python Developer @ Actowiz Solutions | MCA</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="http://linkedin.com/in/vinay-pal-265630293" target="_blank" class="social-icon-btn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/vinaypal31" target="_blank" class="social-icon-btn" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/vinaypal_31?igsh=aTUwYnl1eGJ4dTc1" target="_blank" class="social-icon-btn" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="http://www.youtube.com/@VinayPal-31" target="_blank" class="social-icon-btn" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://wa.me/918085894055" target="_blank" class="social-icon-btn" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Custom Modern JavaScript -->
+  <script src="js/modern.js"></script>
+  <script>
+    // Set dynamic current year in footer
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
